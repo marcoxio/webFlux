@@ -1,6 +1,7 @@
 package com.mitocode.demoreactor;
 
 import com.mitocode.demoreactor.model.Person;
+import com.mitocode.demoreactor.operators.Creation;
 import io.reactivex.Observable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -60,6 +61,8 @@ public class DemoReactorApplication implements CommandLineRunner {
 		Flux<Person> fx = Flux.fromIterable(persons);
 		fx.collectList()
 				.subscribe(list -> log.info(list.toString()));
+
+
 	}
 
 	public static void main(String[] args) {
@@ -68,11 +71,8 @@ public class DemoReactorApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-//		reactor();
-//		rxjava2();
-//		mono();
-//		flux();
-		fluxMono();
+		Creation app = new Creation();
+		app.repeat();
 	}
 
 }
