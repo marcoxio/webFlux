@@ -1,5 +1,6 @@
 package com.mitocode.demoreactor;
 
+import com.mitocode.demoreactor.combination.Combinations;
 import com.mitocode.demoreactor.model.Person;
 import com.mitocode.demoreactor.operators.Creation;
 import com.mitocode.demoreactor.transformation.Transformation;
@@ -72,8 +73,8 @@ public class DemoReactorApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Transformation app = new Transformation();
-		app.groupBy();
+		Combinations app = new Combinations();
+		app.merge();
 	}
 
 }
