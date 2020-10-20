@@ -16,12 +16,17 @@ public class DemoReactorApplication implements CommandLineRunner {
 
 	public void reactor() {
 		Mono.just(new Person(1,"Mito",29))
-		.subscribe(person -> log.info("[Reactor] Persona: " + person));
+				.doOnNext(person -> {
+					// more logic
+					log.info("[Reactor] Persona: " + person);
+				});
+				.subscribe(person -> log.info("[Reactor] Persona: " + person));
 	}
 
 
 	public void rxjava2() {
 		Observable.just(new Person(1,"Mito",29))
+				.doOnNext(person -> log.info("[RxJava2] Persona: " + person)));
 				.subscribe(person -> log.info("[RxJava2] Persona: " + person));
 	}
 
