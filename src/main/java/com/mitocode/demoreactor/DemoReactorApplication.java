@@ -1,6 +1,7 @@
 package com.mitocode.demoreactor;
 
 import com.mitocode.demoreactor.combination.Combinations;
+import com.mitocode.demoreactor.error.ErrorOp;
 import com.mitocode.demoreactor.model.Person;
 import com.mitocode.demoreactor.operators.Creation;
 import com.mitocode.demoreactor.transformation.Transformation;
@@ -67,14 +68,16 @@ public class DemoReactorApplication implements CommandLineRunner {
 
 	}
 
+
+
 	public static void main(String[] args) {
 		SpringApplication.run(DemoReactorApplication.class, args);
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
-		Combinations app = new Combinations();
-		app.merge();
+		ErrorOp app = new ErrorOp();
+		app.errorMap();
 	}
 
 }

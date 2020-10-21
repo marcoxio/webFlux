@@ -1,5 +1,7 @@
 package com.mitocode.demoreactor.model;
 
+import java.util.Objects;
+
 public class Person {
     private Integer idPerson;
     private String names;
@@ -45,5 +47,20 @@ public class Person {
                 ", names='" + names + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return Objects.equals(idPerson, person.idPerson) &&
+                Objects.equals(names, person.names) &&
+                Objects.equals(age, person.age);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(idPerson, names, age);
     }
 }
