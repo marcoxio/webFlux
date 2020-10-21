@@ -17,8 +17,6 @@ public class Conditional {
 
     public void defaultIfEmpty() {
         Mono.just(new Person(1,"Mito",29))
-        //Mono.empty()
-        //Flux.empty()
                 .defaultIfEmpty(new Person(0,"DEFAULT",99))
                 .subscribe(x -> log.info(x.toString()));
     }
