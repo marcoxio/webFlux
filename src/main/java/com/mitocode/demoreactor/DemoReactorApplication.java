@@ -5,6 +5,7 @@ import com.mitocode.demoreactor.conditional.Conditional;
 import com.mitocode.demoreactor.error.ErrorOp;
 import com.mitocode.demoreactor.model.Person;
 import com.mitocode.demoreactor.operators.Creation;
+import com.mitocode.demoreactor.operators.Matematico;
 import com.mitocode.demoreactor.transformation.Transformation;
 import io.reactivex.Observable;
 import org.slf4j.Logger;
@@ -77,8 +78,8 @@ public class DemoReactorApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Conditional app = new Conditional();
-		app.timeOut();
+		Matematico app = new Matematico();
+		app.summarizing();
 	}
 
 }
