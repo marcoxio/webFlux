@@ -1,6 +1,7 @@
 package com.mitocode.demoreactor;
 
 import com.mitocode.demoreactor.combination.Combinations;
+import com.mitocode.demoreactor.conditional.Conditional;
 import com.mitocode.demoreactor.error.ErrorOp;
 import com.mitocode.demoreactor.model.Person;
 import com.mitocode.demoreactor.operators.Creation;
@@ -76,8 +77,8 @@ public class DemoReactorApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		ErrorOp app = new ErrorOp();
-		app.errorMap();
+		Conditional app = new Conditional();
+		app.timeOut();
 	}
 
 }
